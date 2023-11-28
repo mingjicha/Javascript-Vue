@@ -1,0 +1,29 @@
+✔ 자바스크립트란❓ html 문서를 조작하는 언어💬
+
+🎲웹 문서를 객체화 : DOM(Document Object Model) 문서 객체 모델
+    html요소는 하나의 부모태그와 n개의 자식태그를 가질 수 있다. 📍01_DOM_tree.png 참고
+
+🌳DOM tree : 
+    1) 나무 모양의 tree 구조, 각각의 요소를 Node라고 함
+    2) 웹 문서를 제어할 수 있도록 DOM을 만듦
+    3) 각각의 요소에 접근해서 제어할 수 있음
+
+📊브라우저 자체를 제어할 수 있도록 모델링 한 것 : BOM(Browser Object Model) 브라우저 객체 모델
+    BOM은 웹문서 영역을 제어할 수 있게 제공하는 객체 - document객체(:웹 페이지 자체를 의미하며 DOM tree의 최상위 객체)
+
+👩‍💻Console에다가,
+    1) document.getRootNode()
+        > #document
+    2) document.childNodes
+        > <!DOCTYPE html>, html
+
+💡document객체로 DOM객체에 접근한 다음에 DOM에서 지원하는 이러한 property(:객체 안에 있는 모든 속성들)로 제어할 수 있음
+    1) h1에 접근한다 
+        : document.querySelector('h1')
+    2) domObject로 받아온다
+        : let domObject = document.querySelector('h1') 
+    3) domObject를 프로퍼티나 메소드를 통해서 html요소를 제어할 수 있다.
+        : domObject.textContent = '변경합니다!'
+
+💌DOM은 문서 객체 모델로 브라우저에서 자바스크립트로 html을 제어할 수 있도록 제공하는 API이다.
+    - api 자바스크립트 언어가 아니라 브라우저에서 제공하는 기능.
