@@ -48,10 +48,10 @@
 //            - 호출한 놈이 없기 때문에 default this => window
 // let person = {
 //     name: '홍길동1',
-//     printThis: printThis,
+//     p: printThis,
 // };
 //    3-2) let person 해석💁‍♀️
-//         👩‍💻person.printThis();
+//         👩‍💻person.p();
 //         > {name: '홍길동1', printThis: f}
 //             - this => person
 
