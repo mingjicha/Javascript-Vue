@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <link rel="stylesheet" href="./07_event.css">
+</head>
+<body>
+    body 영역
+    <main>
+        main 영역
+        <div>
+            div 영역
+            <p>
+                p 영역
+                <span>span 영역</span>
+            </p>
+        </div>
+        <!-- Event.preventDefault() 설명 -->
+        <a href="http://naver.com">네이버 이동</a>
+    </main>
+    <script>
+        const $body = document.querySelector('body')
+        const $main = document.querySelector('main')
+        const $div = document.querySelector('div')
+        const $p = document.querySelector('p')
+        const $span = document.querySelector('span')
+
+        // 캡쳐링 순서 span ➡ p ➡ div ➡ main ➡ body ➡ html
+        // $span.addEventListener('click', function() {
+        //     console.log('span 태그')
+        // })
+        // $p.addEventListener('click', function() {
+        //     console.log('p 태그')
+        // })
+        // $div.addEventListener('click', function() {
+        //     console.log('div 태그')
+        // })
+        // $main.addEventListener('click', function() {
+        //     console.log('main 태그')
+        // })
+        // $body.addEventListener('click', function() {
+        //     console.log('body 태그')
+        // })
+        // addEventListener
+        // : (method) HTMLSpanElement.addEventListener<"click">(type: "click", listener: (this: HTMLSpanElement, ev: MouseEvent) => any, options?: boolean | AddEventListenerOptions | undefined): void (+1 overload)
+        //     boolean 타입으로 true 넣으면 캡쳐링 false 넣으면 버블링(default값)
+        $span.addEventListener('click', function(event) {
+            console.log('[' + event.eventPhase + '] 캡쳐링 span 태그')
+        }, true)
+        $p.addEventListener('click', function() {
+            console.log('[' + event.eventPhase + '] 캡쳐링 p 태그')
+        }, true)
+        $div.addEventListener('click', function() {
+            console.log('[' + event.eventPhase + '] 캡쳐링 div 태그')
+        }, true)
+        $main.addEventListener('click', function() {
+            console.log('[' + event.eventPhase + '] 캡쳐링 main 태그')
+        }, true)
+        $body.addEventListener('click', function() {
+            console.log('[' + event.eventPhase + '] 캡쳐링 body 태그')
+        }, true)
+        // Event.stopPropagation() 설명을 위한 주석 처리
+        // $span.addEventListener('click', function() {
+        //     console.log('[' + event.eventPhase + '] 버블링 span 태그')
+        // }, false)
+        $p.addEventListener('click', function() {
+            console.log('[' + event.eventPhase + '] 버블링 p 태그')
+        }, false)
+        $div.addEventListener('click', function() {
+            console.log('[' + event.eventPhase + '] 버블링 div 태그')
+        }, false)
+        $main.addEventListener('click', function() {
+            console.log('[' + event.eventPhase + '] 버블링 main 태그')
+        }, false)
+        $body.addEventListener('click', function() {
+            console.log('[' + event.eventPhase + '] 버블링 body 태그')
+        }, false)
+        
+        // 📢이벤트 흐름 단계를 아라보자.
+        //     Event.eventPhase : 읽기 전용 속성으로 현재 평가 중인 이벤트 흐름 단계를 나타냄
+        //         💁‍♀️흐름의 단계를 정수 값으로 반환 함 
+        //             [0] : 현재 처리 중이 아님
+        //             [1] : 캡쳐링 될 때, 이벤트가 대상의 부모 객체를 통해 전파 중
+        //             [2] : 이벤트 대상에 도착
+        //             [3] : 역순으로 전파 중 
+
+        //  💡실무에서 자주 사용하는 이벤트의 전파를 막을 때,
+        //      1) Event.stopPropagation()
+        $span.addEventListener('click', function() {
+            event.stopPropagation();
+            console.log('[' + event.eventPhase + '] 버블링 span 태그')
+        }, false)
+        //      2) Event.preventDefault()
+        //          네이버로 이동하는 a태그를 만들 었을 때, 이 함수를 호출하면 기본 동작을 막음
+        const $a = document.querySelector('a')
+        $a.addEventListener('click', function(event) {
+            event.preventDefault();
+        })
+    </script>
+<!-- 
+    ✔ 이벤트 버블링과 캡쳐링
+        브라우저에서 html에서 이벤트가 발생했을 때 어떻게 전파하는가❓ 📍07_event.jpg 참고
+        타깃 요소에 이벤트가 발생했을 때 최상위 요소부터 자식요소를 타고 이벤트를 올라가는 것 : 캡쳐링📸
+        타깃 이벤트가 실행한 후 다시 부모요소를 타고 내려가는 것을 : 버블링💦
+-->
+</body>
+</html>
