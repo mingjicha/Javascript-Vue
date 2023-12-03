@@ -5,6 +5,7 @@
 </template>
 
 <script>
+// onMounted, ref OptionAPI를 보안하기 위해 새롭게 등장함
 import { onMounted, ref } from 'vue';
 
 export default {
