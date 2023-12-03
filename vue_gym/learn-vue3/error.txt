@@ -1,0 +1,23 @@
+1. 파일 위치 확인
+D:\review\review\vue_gym> npm run dev 
+
+npm ERR! Missing script: "dev"
+npm ERR!
+npm ERR! To see a list of scripts, run:
+npm ERR!   npm run
+
+npm ERR! A complete log of this run can be found in: C:\Users\OWNER\AppData\Local\npm-cache\_logs\2023-12-03T05_32_17_530Z-debug-0.log
+
+✔  D:\review\review\vue_gym> cd .\learn-vue3\
+
+2. package-lock.json 확인
+PS D:\review\review\vue_gym\learn-vue3> npm run dev
+
+> learn-vue3@0.0.0 dev
+> vite
+
+'vite'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+✔ PS D:\review\review\vue_gym\learn-vue3> npm install
+✔ PS D:\review\review\vue_gym\learn-vue3> npm run dev
