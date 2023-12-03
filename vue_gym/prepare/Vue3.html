@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hello Vue3</title>
+  <!-- vue 연결 -->
+	<script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="counter">
+    <button type="button" v-on:click="counter++">
+      Counter: {{ counter }}
+    </button>
+  </div>
+  <script>
+    const Counter = {
+      data() {
+        return {
+          counter: 0
+        }
+      }
+    }
+    Vue.createApp(Counter).mount('#counter')
+  </script>
+</body>
+</html>
