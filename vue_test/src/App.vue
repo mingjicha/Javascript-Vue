@@ -93,13 +93,20 @@
 					<div></div>
 				</div>
 				<div class="main_2_news">
+					<!-- 네모 박스가 세로로 줄어들 때 자꾸 줄어들어억!! -->
 					<!-- 뉴스 가져오기 a링크 -->
 				</div>
 			</div>
 			<div class="main_3">
-				<div class="main_3_txt">
-					우리 경상도에서 <strong>인기있는</strong><br />
-					<strong>관광지</strong>를 만나보세요!
+				<div class="main_3_box">
+					<div class="main_3_left">
+						<div class="main_2_box_txt">관광정보</div>
+						<div class="main_2_line"></div>
+					</div>
+					<div class="main_3_txt">
+						우리 경상도에서 <strong>인기있는</strong><br />
+						<strong>관광지</strong>를 만나보세요!
+					</div>
 				</div>
 			</div>
 			<div class="main_4">
