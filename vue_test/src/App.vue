@@ -34,7 +34,7 @@
 								<a href="#" target="_self">배고프당</a>
 								<ul class="depth1">
 									<li>
-										<a href="#" target="_self" onclick="">마라아탕</a>
+										<a href="#" target="_self" onclick="">마아라탕</a>
 									</li>
 									<li>
 										<a href="#" target="_self" onclick="">먹구시펑</a>
@@ -47,10 +47,10 @@
 				<div class="header_right">
 					<ul class="gnb">
 						<li>
-							<a href="#">LOGIN</a>
+							<a href="#">로그인</a>
 						</li>
 						<li>
-							<a href="#">JOIN</a>
+							<a href="#">회원가입</a>
 						</li>
 					</ul>
 				</div>
