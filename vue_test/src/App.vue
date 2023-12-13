@@ -104,7 +104,7 @@
 						<div class="main_2_line"></div>
 					</div>
 					<div class="main_3_txt">
-						우리 경상도에서 <strong>인기있는</strong><br />
+						경상도에서 <strong>인기있는</strong><br />
 						<strong>관광지</strong>를 만나보세요!
 					</div>
 				</div>
