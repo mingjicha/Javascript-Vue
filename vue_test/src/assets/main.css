@@ -22,47 +22,55 @@
 .main_1 {
   height: 100vh;  
   width: 100%;  
-  position:relative;
+  position: relative;
+  background-image: url(./maru.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main_sl {
   height: 100vh;  
   width: 100%;  
-
+}
+.main_1_box {
+  width: 100%;
 }
 .main_txt {
-font-size: 2rem;
-color: #fff;
-font-weight: bold;
-position:absolute;
-top: 300px;
-left: 100px;
+  float: left;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  margin: 50px;
+  padding: 300px 0;
+}
+.main_wea {
+  display: block;
+  height: 160px;
+  width: 160px;
+  margin: 200px 50px;
+  float: right;
 }
 .main_wea_up {
   height: 50px;  
   width: 160px; 
   text-align: center;
-  background-color: hsla(228, 23%, 25%, 0.6);
+  background-color: rgba(92, 98, 102, 0.6);
   border-radius: 20px 20px 0px 0px;
-  position:fixed;
-  top: 300px;
-  left: 1650px;
+  font-size: 26px;
+  height: 36px;
+  padding: 0 11px;
+  margin: 0 0 1px;
 }
 .main_wea_down {
   height: 100px;  
   width: 160px; 
   text-align: center;
-  background-color: hsla(228, 23%, 25%, 0.6);
+  background-color: rgba(92, 98, 102, 0.6);
   border-radius: 0px 0px 20px 20px;
-  position:fixed;
-  top: 338px;
-  left: 1650px;
-}
-.main_wea_up {
-  height: 36px;
-  padding: 0 11px;
-  margin: 0 0 1px;
+  font-size: 26px;
 }
 
+
+/* 반응형 */
 @media screen and (max-width: 740px) {
   * { 
     font-size:14px
