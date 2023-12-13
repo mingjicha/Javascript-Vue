@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 1.5rem;
+  
 }
 
 /* 폰트 */
@@ -10,6 +11,7 @@
   font-family: 'EASTARJET-Medium';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/EASTARJET-Medium.woff2') format('woff2');
 }
+body, html, a, button, table, input, select, textarea {font-family:EASTARJET-Medium;}
 
 /* header */
 .skip_nav a{position:absolute; top:-30px; left:0; background:#000; height:30px; line-height:30px; color:#fff; font-size:12px; padding:0 6px;z-index: 9999999;}
@@ -23,7 +25,7 @@
 
 .nav{display:flex;align-items:center;font-size:1.375rem;}
 .nav li{position: relative;}
-.nav > li > a{color: var(--main-color);display: flex;padding: 0 3.5rem;align-items: center;font-size: 1.1rem;}
+.nav > li > a{color: var(--main-color);display: flex;padding: 0 3.5rem;align-items: center;font-size: 1.8rem;}
 .header .nav > li:hover > a{color: var(--sub-02-color);font-weight: 800;}
 
 .gnb{display: flex;justify-content: flex-start;align-items: center;cursor: pointer;}
@@ -37,7 +39,7 @@
 .search_area.on{top: 85px;}
 .search_input{position: relative;}
 .search_input .input{width: 500px;border: none;border-bottom: 1px solid #000;background: none;padding: 10px;font-size: 1rem;color: #000;}
-.search_input .input::placeholder{color: #ddd;}
+.search_input .input::placeholder{color: #fff;}
 .search_input_btn {position: absolute;top: 50%;right: 0;width: 1.5rem;cursor: pointer;transform: translateY(-50%);}
 .search_input_btn .material-icons{color: #000;}
 
@@ -58,7 +60,7 @@ ol,ul {list-style:none;}
 a {text-decoration:none}
 
 @media screen and (max-width: 1600px) {
-  .header {height: 75px;padding: 0 10px;}
+  .header {height: 150px;padding: 0 15px;}
   .gnb li{margin-left: 15px;}
   .lnb::before {top: 75px;}
   .search_area{height: 75px;}
@@ -67,10 +69,12 @@ a {text-decoration:none}
 
 @media screen and (max-width: 1200px) {
   .nav > li > a{padding: 0 1.65rem;}
+  .main_wea_up {display: none;}
+  .main_wea_down {display: none;}
 }
 
 @media screen and (max-width: 900px) {
-  .header {height: 65px;padding: 0 10px;}
+  .header {height: 100px;padding: 0 10px;}
   .lnb,.gnb{display: none;}
   .search_area{height: 65px;}
   .search_area.on{top: 65px;}
@@ -182,10 +186,53 @@ a {text-decoration:none}
 .main_2 {
   height: 100vh;  
   width: 100%;  
-  background-color: rgba(245, 245, 220, 0.5);
+  background-color: #fff;
+  display: flex;
+}
+.main_2_box {
+  width: 40%;
+  height: 100vh;
+  padding: 180px 80px;
+  position: relative;
+}
+.main_2_box_txt {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  display: inline-block;
+}
+.main_2_line {
+  content: "";
+  display: inline-block;
+  margin-left: 0.8rem;
+  width: 5rem;
+  height: 1px;
+  background-color: #222;
+  vertical-align: middle;
 }
 .main_2_txt {
   display: block;
+  font-size: 2.5rem;
+  font-weight: 500;
+  z-index: 10;
+  position: absolute;
+}
+.main_y {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  top: 255px;
+  left: 50px;
+}
+.mian_shap {
+  position: absolute;
+  top: 400px;
+}
+.main_2_news {
+  margin: 200px 80px 0px 50px;
+  width: 60%;
+  height: 70%;
+  background-color: #222;
+  /* float:right; */
 }
 /* 메인 세번째 */
 .main_3 {
@@ -209,6 +256,7 @@ a {text-decoration:none}
 /* 공통 */
 .strong {
   font-weight: 700;
+  font-size: 2rem;
 }
 /* 푸터 */
 .footer {

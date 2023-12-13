@@ -70,16 +70,30 @@
 						놀러오세요! 경상도, 좋아요!<br />블루베리스무디 맛있어요.<br />이의이승이
 						뭐냐구요 ?<br />일단, 와보면 알아요!
 					</div>
+					<!-- 날씨는 반응형 태블릿 때 사라짐 -->
 					<div class="main_wea">
 						<div class="main_wea_up">날씨 위</div>
 						<div class="main_wea_down">날씨 아래</div>
 					</div>
 				</div>
 			</div>
+			<!-- 왼쪽 축제정보-- 이거 한 묶음, 왼쪽 색연필 + 경상도!랑 #한 묶음, 보도뉴스들 한 묶음 총 세개로 플렉스 넣기   -->
 			<div class="main_2">
-				<div class="main_2_txt">
-					우리 경상도에서 <strong>인기있는</strong><br />
-					<strong>축제</strong>를 만나보세요!
+				<div class="main_2_box">
+					<div class="main_2_box_txt">축제정보</div>
+					<div class="main_2_line"></div>
+					<!-- main_2_txt 같은 곳에 공통 애니 효과 넣을 거임!! -->
+					<img class="main_y" src="./assets/yellow.png" alt="색연필" />
+					<div class="main_2_txt">
+						경상도에서 인기있는<br />
+						축제를 만나보세요!
+					</div>
+					<div class="mian_shap">#머시기 #머시기 #머시기</div>
+					<!-- 반응형 사라질 때 노란효과 없애기 -->
+					<div></div>
+				</div>
+				<div class="main_2_news">
+					<!-- 뉴스 가져오기 a링크 -->
 				</div>
 			</div>
 			<div class="main_3">

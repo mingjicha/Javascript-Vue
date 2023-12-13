@@ -20,5 +20,4 @@ $('.mo_header .nav > li > a').on('click', function () {
 		element.siblings('li').find('ul').slideUp(300);
 	}
 });
-
-js 어떻게 연결하지요..?>
+// js 어떻게 연결하지요..?>
