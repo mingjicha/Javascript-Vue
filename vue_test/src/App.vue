@@ -83,12 +83,13 @@
 					<div class="main_2_box_txt">축제정보</div>
 					<div class="main_2_line"></div>
 					<!-- main_2_txt 같은 곳에 공통 애니 효과 넣을 거임!! -->
-					<img class="main_y" src="./assets/yellow.png" alt="색연필" />
+					<img class="main_2_y" src="./assets/yellow.png" alt="색연필" />
 					<div class="main_2_txt">
 						경상도에서 인기있는<br />
 						축제를 만나보세요!
 					</div>
-					<div class="mian_shap">#머시기 #머시기 #머시기</div>
+					<!-- 빈공간 많으면 머시기 넣을지 생각하기 -->
+					<!-- <div class="mian_shap">#머시기 #머시기 #머시기</div> -->
 					<!-- 반응형 사라질 때 노란효과 없애기 -->
 					<div></div>
 				</div>
@@ -103,22 +104,47 @@
 						<div class="main_2_box_txt">관광정보</div>
 						<div class="main_2_line"></div>
 					</div>
-					<div class="main_3_txt">
-						경상도에서 <strong>인기있는</strong><br />
-						<strong>관광지</strong>를 만나보세요!
+					<div class="main_3_mid">
+						<img class="main_3_y" src="./assets/yellow.png" alt="색연필" />
+						<div class="main_3_txt">
+							경상도에서 인기있는<br />
+							관광지를 만나보세요!
+						</div>
+					</div>
+					<div class="main_3_news">
+						<!-- 가운데로 오게 해주세요 제발 -->
 					</div>
 				</div>
 			</div>
 			<div class="main_4">
-				<div class="main_4_txt">
-					우리 경상도에서 <strong>진행 중인</strong><br />
-					<strong>행사</strong>를 만나보세요!
+				<div class="main_4_box">
+					<div class="main_4_left">
+						<div class="main_2_box_txt">행사정보</div>
+						<div class="main_2_line"></div>
+					</div>
+					<img class="main_4_y" src="./assets/yellow.png" alt="색연필" />
+					<div class="main_4_txt">
+						경상도에서 진행 중인<br />
+						행사를 만나보세요!
+					</div>
+				</div>
+				<div class="main_4_news">
+					<!-- 위에랑 동일하지만 슬라이드 효과른 넣을게요 -->
 				</div>
 			</div>
+			<!-- 똑같이 줬는데 왜 자꾸 얘만 떨어질까 ?? -->
 			<div class="main_5">
+				<div class="main_5_box">
+					<div class="main_5_left">
+						<div class="main_2_box_txt">소통광장</div>
+						<div class="main_2_line"></div>
+					</div>
+				</div>
+				<!-- 색연필은 맨 위로 올라감 -_- -->
+				<img class="main_5_y" src="./assets/yellow.png" alt="색연필" />
 				<div class="main_5_txt">
-					'가가가가?' <strong>다양한</strong><br />
-					<strong>재미</strong>를 공유해 보세요!
+					'가가가가?' 다양한<br />
+					재미를 공유해 보세요!
 				</div>
 			</div>
 		</div>
