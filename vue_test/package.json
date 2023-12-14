@@ -10,7 +10,14 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "aos": "^2.3.4",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.5",
+    "animate.css": "^4.1.1",
+    "aos": "^3.0.0-beta.6",
+    "locomotive-scroll": "^5.0.0-beta.11",
     "swiper": "^7.0.0-alpha.40",
     "vue": "^3.3.4"
   },
