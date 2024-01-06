@@ -30,14 +30,20 @@
 	background-color: #fff;
 	color: #000;
 	border: none;
+	font-family: 'Cafe24SsurroundAir';
+	font-weight: bold;
 }
 .qna_drop:hover {
 	background-color: #fff;
 	color: #000;
+	font-family: 'Cafe24SsurroundAir';
+	font-weight: bold;
 }
 .qna_drop:active {
 	background-color: #fff;
 	color: #000;
+	font-family: 'Cafe24SsurroundAir';
+	font-weight: bold;
 }
 .qna_drop_item:active {
 	background-color: #E9ECEF;
