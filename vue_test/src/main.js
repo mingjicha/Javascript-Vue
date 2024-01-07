@@ -13,5 +13,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import 'bootstrap/dist/js/bootstrap.js';
 library.add(fas);
+import Paginate from 'vuejs-paginate';
 
-createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');
+createApp(App)
+	.component('font-awesome-icon', FontAwesomeIcon, 'paginate', Paginate)
+	.mount('#app');
