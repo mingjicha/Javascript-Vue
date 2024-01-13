@@ -24,6 +24,17 @@
 						<!-- <button @click="post.isLike = !post.isLike">toggle</button> -->
 					</div>
 				</div>
+				<hr class="my-4" />
+				<!-- modelValue
+				update:modelValue -->
+				<!-- :model-value="username" 
+					@update:model-value="value => (username = value)" -->
+				<LabelInput v-model="username" label="이름"></LabelInput>
+				<LabelTitle v-model:title="username" label="제목"></LabelTitle>
+				<Username
+					v-model:firstname="firstname"
+					v-model:lastname="lastname"
+				></Username>
 			</div>
 		</main>
 	</div>
@@ -32,11 +43,19 @@
 <script>
 import AppCard from './AppCard.vue';
 import PostCreate from './PostCreate.vue';
+import LabelInput from './LabelInput.vue';
+import LabelTitle from './LabelTitle.vue';
+import Username from './Username.vue';
 import { reactive } from 'vue';
+import { ref } from 'vue';
+
 export default {
 	components: {
 		AppCard,
 		PostCreate,
+		LabelInput,
+		LabelTitle,
+		Username,
 	},
 	setup() {
 		const post = reactive({
@@ -68,7 +87,11 @@ export default {
 			console.log('newPost: ', newPost);
 			posts.push(newPost);
 		};
-		return { post, posts, createPost };
+
+		const username = ref('');
+		const firstname = ref('');
+		const lastname = ref('');
+		return { post, posts, createPost, username, firstname, lastname };
 	},
 };
 </script>
