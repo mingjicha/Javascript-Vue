@@ -1,3 +1,4 @@
+<!-- 게시글이 추가되는 부분 -->
 <template>
 	<div class="card">
 		<!-- <img src="..." class="card-img-top" alt="..." /> -->

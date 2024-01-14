@@ -1,3 +1,4 @@
+<!-- 성 이름 작성 -->
 <template>
 	<div>
 		<LabelInput

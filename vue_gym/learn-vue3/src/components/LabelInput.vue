@@ -1,16 +1,15 @@
+<!-- 이름 작성 -->
 <template>
-	<div>
-		<label>
-			{{ label }}
-			<!-- v-model="username" -->
-			<input v-model="value" type="text" />
-			<!-- <input
-				:value="modelValue"
-				@input="event => $emit('update:modelValue', event.target.value)"
-				type="text"
-			/> -->
-		</label>
-	</div>
+	<label class="form-label" id="child-id">
+		{{ label }}
+	</label>
+	<!-- v-model="username" -->
+	<input v-model="value" v-bind="$attrs" type="text" class="form-control" />
+	<!-- <input
+			:value="modelValue"
+			@input="event => $emit('update:modelValue', event.target.value)"
+			type="text"
+		/> -->
 </template>
 
 <script>

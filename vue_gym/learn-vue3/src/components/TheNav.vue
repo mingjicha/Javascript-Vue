@@ -1,4 +1,5 @@
 <!-- vbase-3 기본 템플릿 생성 명령어 -->
+<!-- 네비바 -->
 <template>
 	<div>
 		<nav class="navbar navbar-expand-sm navbar-dark bg-primary">

@@ -1,3 +1,4 @@
+<!-- 상단 Create부분 -->
 <template>
 	<div class="row g-3">
 		<div class="col col-2">
