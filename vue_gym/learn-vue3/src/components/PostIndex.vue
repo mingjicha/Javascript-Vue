@@ -8,20 +8,20 @@
 				<hr class="my-4" />
 				<div class="row g-3">
 					<!-- <div class="col col-4">
-						<AppCard title="제목1" contents="내용1"></AppCard>
+						<PostItem title="제목1" contents="내용1"></PostItem>
 					</div> -->
 					<!-- v-bind 사용 -->
 					<!-- <div class="col col-4">
-						<AppCard :title="post.title" :contents="post.contents"></AppCard>
+						<PostItem :title="post.title" :contents="post.contents"></PostItem>
 					</div> -->
 					<div v-for="post in posts" :key="post.id" class="col col-4">
-						<AppCard
+						<PostItem
 							:title="post.title"
 							:contents="post.contents"
 							:type="post.type"
 							:is-like="post.isLike"
 							@toggle-like="post.isLike = !post.isLike"
-						></AppCard>
+						></PostItem>
 						<!-- <button @click="post.isLike = !post.isLike">toggle</button> -->
 					</div>
 				</div>
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import AppCard from './AppCard.vue';
+import PostItem from './PostItem.vue';
 import PostCreate from './PostCreate.vue';
 import LabelInput from './LabelInput.vue';
 // import LabelTitle from './LabelTitle.vue';
@@ -60,7 +60,7 @@ import { ref } from 'vue';
 
 export default {
 	components: {
-		AppCard,
+		PostItem,
 		PostCreate,
 		LabelInput,
 		// LabelTitle,
