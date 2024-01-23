@@ -8,5 +8,10 @@ const app = createApp(App);
 
 // app.component('AppCard', AppCard);
 
+app.provide('app-message', 'app message입니다');
+
+// 라이브러리 provide 하기
+app.config.globalProperties.msg = 'hello';
+app.provide('msg', 'hello msg');
 app.mount('#app');
 import 'bootstrap/dist/js/bootstrap.js';
