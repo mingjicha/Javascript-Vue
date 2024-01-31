@@ -1,0 +1,21 @@
+💡Tip1
+const name = "MIke";
+const message = `My name is ${name}`;
+
+const message2 = "My name is ${name}";
+console.log(message2) -> "My name is ${name}"
+
+💡Tip2
+1. 문자형 + 문자형 사용 가능
+const name = "Mike";
+
+const a = "나는 ";
+const b = " 입니다.";
+
+console.log(a + name + b); -> "나는 Mike 입니다."
+
+2. 숫자형 + 문자형 사용 가능, 숫자형은 문자형으로 변경됨
+const age = 30; 
+console.log(a+ age + "살" + b); -> "나는 30살 입니다."
+
+
