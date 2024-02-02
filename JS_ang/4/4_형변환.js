@@ -30,7 +30,7 @@ console.log(
   Number(undefined) // NaN
 )
 
-// Boolean 불린형은 false만 기억하면 됨
+// ⭕Boolean 불린형은 false만 기억하면 됨
 console.log(
   Boolean(0),
   Boolean(""),
