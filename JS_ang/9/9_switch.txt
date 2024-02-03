@@ -1,0 +1,15 @@
+❓if-else문 써도 되지만 case가 다양할 경우는 switch를 사용하면 간결하게 쓸 수 있음
+
+switch(평가) {
+  case A :
+  A일 때 코드
+  case B :
+  B일 때 코드
+  ...
+}
+🔽if문으로 바꾸면,
+if(평가 == A) {
+  A일 때 코드
+} else if(평가 == B) {
+  B일 때 코드
+}
