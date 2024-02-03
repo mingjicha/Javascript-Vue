@@ -7,7 +7,7 @@
 
 브라우저가 가지고 있는 내장 함수 ex) console, alert, confirm
 
-함수 작성.
+✅함수 작성.
 function sayHello(name) {
   console.log(`Hello, ${name}`);
 }
