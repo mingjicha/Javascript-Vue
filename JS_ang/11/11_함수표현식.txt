@@ -36,20 +36,20 @@ sayHello();
 let add = function(num1, num2) {
   return num1 + num2;
 }
-위의 함수를 화살표 함수를 바꾸면
+위의 함수를 화살표 함수를 바꾸면,
 let add = (num1, num2) => {
   return num1 + num2;
 }
 이렇게 간결하게 작성할 수 있음.
 
-만약 리턴문이 한 줄이라면
+만약 리턴문이 한 줄이라면,
 let add = (num1, num2) => num1 + num2; 
 로도 작성할 수 있음
 
-인수가 하나라면
+인수가 하나라면,
 let sayHello = name => `Hello, ${name}`;
 
-인수가 없다면
+인수가 없다면,
 let showError = () => {
   alert('error!');
 }

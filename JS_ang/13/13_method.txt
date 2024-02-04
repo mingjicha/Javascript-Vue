@@ -1,0 +1,72 @@
+method : 객체 프로퍼티로 할당된 함수
+const superman = {
+  name: 'clark',
+  age: 33,
+  fly: function() {
+    console.log('날아갑니다.')
+  }
+}
+superman.fly(); // 날아갑니다
+
+fly: function() {
+  console.log('날아갑니다.')
+}
+단축해서 사용하면,
+fly() {
+  console.log('날아갑니다.')
+}
+
+💡객체와 메소드의 관계
+const user = {
+  name: 'Mike',
+  sayHello: function() {
+    console.log(`Hello, I'm 네모`);
+  }
+}
+네모 안에 유저 네임을 받고 싶다면,
+const user = {
+  name: 'Mike',
+  sayHello: function() {
+    console.log(`Hello, I'm ${user.name}`);
+  }
+}
+⛔하지만 이 방식은 문제가 발생할 수 있어서 this를 사용하는 것이 좋음
+const user = {
+  name: 'Mike',
+  sayHello: function() {
+    console.log(`Hello, I'm ${this.name}`);
+  }
+}
+user.sayHello(); 로 호출하면 user가 sayHello의 this가 됨
+
+let boy = {
+  name: 'Mike',
+}
+let girl = {
+  name: 'Jane',
+}
+sayHello: function() {
+  console.log(`Hello, I'm ${this.name}`);
+}
+여기서 this는 아직 결정되지 않았고 어떻게 호출되는냐에 따라 달라짐
+this는 실행하는 시점 런타임에 결정됨
+this는 . 앞에 있는 객체
+boy.sayHello(); // I'm Mike
+girl.sayHello(); // I'm Jane
+
+⛔만약 저 함수를 화살표 함수로 선언하면 동작이 달라지게 됨
+화살표 함수는 일반 함수와 달리 자신만의 this를 가지지 않음
+화살표 함수 내부에서 this를 사용하면, 그 this는 외부에서 값을 가져 옴
+let boy = {
+  name: 'Mike',
+  sayHello: () => {
+    console.log(this);
+  }
+}
+boy.sayHello();
+-> this는 . 앞에 있는 boy객체를 가르키지 않음
+
+화살표 함수 안에 this를 쓰게 되면 전역객체를 가르키게 됨
+브라우저 환경에서는 window를 Node js 환경에서는 global
+
+자스에서 this는 아주 복잡함...
