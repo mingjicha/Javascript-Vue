@@ -1,0 +1,62 @@
+객체란❓
+Superman의 이름은 clark, 나이는 33살
+const superman = {
+  name : 'clark',
+  age : 33,
+}
+이것이 객체,
+객체는 중괄호({})로 작성하고 key(name, age)와 value(clark, 33)로 구성된 프로퍼티가 들어감
+각 프로퍼티는 , 쉼표로 구분함
+
+✅객체의 접근
+1. . 사용
+superman.name // 'clark'
+2. [] 사용
+superman['age'] // 33
+
+✅객체의 추가
+1. . 사용
+superman.gender = 'male';
+2. [] 사용
+superman['hairColor'] = 'black';
+
+✅객체의 삭제
+1. 삭제하고 싶은 프로퍼티 앞에다가 delete
+delete superman.hairColor;
+
+✅단축 프로퍼티
+const name = 'clark';
+const age = 33;
+
+const superman = {
+  name: name,
+  age: age,
+  gender: 'male',
+}
+를 단축시키면, 
+
+const superman = {
+  name,
+  age,
+  gender: 'male',
+}
+
+✅프로퍼티 존재 여부 확인
+const superman = {
+  name: name,
+  age: age,
+}
+존재하지 않는 프로퍼티에 접근하면 에러가 발생하지 않고 undefined가 뜸
+superman.birthDay; // undefined
+
+이때 in 연산자를 사용하면 프로퍼티가 존재하는지 확인 할 수 있음
+'birthDay' in superman; // false
+'age' in superman // true
+
+-> (함수인자나 api로 데이터를 통신 받을 때) 어떤 값이 없는지 확신할 수 없을 때 사용
+
+✅for ... in 반복문을 사용하면 객체를 순회하면서 값을 얻을 수 있음
+for(let key in superman) {
+  console.log(key)
+  console.log(superman[key])
+}
