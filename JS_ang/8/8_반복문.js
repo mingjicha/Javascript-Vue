@@ -1,27 +1,27 @@
 // for문
 console.log('for 1번');
 for(let i = 0; i < 10; i++){
-  console.log(i);
+  console.log(i); // 0 ~ 9
 }
 console.log('for 2번');
 for(let i = 0; i < 10; i++){
-  console.log(i+1);
+  console.log(i+1); // 1 ~ 10
 }
 console.log('for 3번');
 for(let i = 0; i < 11; i++){
-  console.log(i);
+  console.log(i); // 0 ~ 10
 }
 console.log('for 4번');
 for(let i = 0; i <= 10; i++){
-  console.log(i);
+  console.log(i); // 0 ~ 10
 }
-// 같은 결과 반복
+
 
 // while문
 console.log('while');
 let i = 0;
 while(i < 10) {
-  console.log(i);
+  console.log(i); // 0 ~ 9
   i++;
 }
 
