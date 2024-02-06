@@ -25,8 +25,8 @@ function sayHello2(name) {
   // let으로 바꾼 이유 메시지 내용이 달라질 수 있기 때문에
   if(name) {
     msg += ', ' + name;
-    // msg안에 msg, + name을 해서 넣어 줌
-    // 백팁을 넣을 경우는 아래처럼 사용
+		// msg = msg + ', ' + name;
+    // 백팁을 사용할 경우는 아래처럼 사용
     // msg += `, ${name}`;
   }
   console.log(msg);
