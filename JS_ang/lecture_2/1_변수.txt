@@ -1,0 +1,31 @@
+let, const ES6에서 생긴 것
+그 이전에는 var를 사용
+
+var와 let은 비슷하지만
+var는 한 번 선언된 변수를 다시 선언할 수 있음
+
+let name = 'Mike';
+console.log(name); // Mike
+let name = 'Jane'; 
+console.log(name); // error
+
+var는 선언하기 전에 사용할 수 있음
+
+console.log(name); // undefined
+var name = 'Mike';
+var name이 나오기 전에 사용했는데 에러를 일으키지 않음
+그 이유는 아래처럼 동작하기 때문
+var name;
+console.log(name); // undefined
+name = 'Mike';
+var로 선언한 모든 변수는 코드가 실제로 실행되지 않지만 최상위로 끌어올려진 것처럼 행동
+이것을 호이스팅이라고 함
+근데 console은 undefined으로 뜸
+선언은 호이스팅 되지만 할당은 호이스팅 되지 않음
+name이라는 변수만 올려진 것이고 Mike라는 값은 그 자리에 있는 것
+
+같은 상황에서 let은 에러가 남
+console.log(name); // referenceError
+let name = 'Mike';
+let과 const도 호이스팅 되지만
+***호이스팅 : 스코프 내부 어디서든 변수 선언은 최상위에 선언된 것처럼 행동
