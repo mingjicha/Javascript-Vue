@@ -27,5 +27,6 @@ name이라는 변수만 올려진 것이고 Mike라는 값은 그 자리에 있�
 같은 상황에서 let은 에러가 남
 console.log(name); // referenceError
 let name = 'Mike';
-let과 const도 호이스팅 되지만
 ***호이스팅 : 스코프 내부 어디서든 변수 선언은 최상위에 선언된 것처럼 행동
+왜 에러를 낼까?
+let과 const도 호이스팅 되지만 TDZ에 영향이 받기 때문에 TDZ영역에 있는 변수들은 사용할 수 없기 때문
