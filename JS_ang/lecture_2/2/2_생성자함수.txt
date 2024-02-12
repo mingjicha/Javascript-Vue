@@ -1,0 +1,46 @@
+// 생성자 함수
+
+// 함수명은 첫글자는 대문자
+function User(name, age) {
+  this.name = name;
+  this.age = age;
+}
+// 이름과 나이를 인자로 받아서 this에 넣어줌
+
+// new 연산자를 사용해서 호출
+let user1 = new User('Mike', 30);
+let user2 = new User('Jane', 22);
+let user3 = new User('Tom', 17);
+
+// 💡함수 실행 순서는
+// 먼저 
+function User(name, age) {
+  // 안에 빈 객체를 만들고 this에 할당함
+  // this = {}
+
+  // this에 프로퍼티들을 추가함
+  this.name = name;
+  this.age = age;
+
+  // 마지막으로 this를 반환함
+  // return this;
+}
+new User();
+// new를 붙여서 실행하는 순간 저 방식으로 알고리즘이 동작
+// 일일히 객체 리트럴 쓰는 것보다 훨신 빠르고 일관성 있게 객체를 만들 수 있음
+// 스펙이 변경되어도 생성자 함수만 고치면 됨
+
+// 어떤 함수라도 new를 붙여서 실행하면 저 알고리즘이 동일하게 동작
+// 생성자 함수는 첫글자를 대문자로 하는게 관례
+
+// ✅생성자 함수에 메서드를 추가
+function User(name, age) {
+  this.name = name;
+  this.age = age;
+  // 이름을 알려주는 메서드
+  this.sayName = function() {
+    console.log(this.name); // this=user5
+  }
+}
+let user5 = new User('Han', 40);
+user5.sayName(); // 'Han'
