@@ -39,7 +39,7 @@ export default {
 			return teacher.lectures.length > 0 ? '있음😊' : '없음😥';
 		});
 
-		// 메서드를 활용하면 computed와 동일한 효과를 얻을 수 있음
+		// 메소드를 활용하면 computed와 동일한 효과를 얻을 수 있음
 		// const existLecture = () =>
 		// 	teacher.lectures.length > 0 ? '있음😊' : '없음😥';
 		const existLecture = () => {
