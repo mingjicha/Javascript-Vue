@@ -1,0 +1,84 @@
+심볼(Symbol)
+
+지금까지 객체의 프로퍼티 키(property key)는 문자형으로 만듦
+const obj = {
+  1: '1입니다.',
+  false: '거짓'
+}
+object.keys(obj); // ["1", "false"] 문자형으로 반환
+obj['1'] // '1입니다.'
+obj['false'] // '거짓'
+
+✅객체의 프로퍼티 키가 문자형 말고 가능한 거는 심볼
+const a = Symbol(); 
+const b = Symbol(); 
+new를 붙이지 않음
+⭕심볼은 유일한 식별자를 만들 때 사용
+console.log(a);
+console.log(b);
+console.log(a == b); // false
+console.log(a === b); // false
+
+💡심볼은 유일성을 보장됨
+-> 전체 코드 중 딱 한 개라는 뜻
+const id = Symbol('id');
+'id'는 심볼의 설명을 붙인 것이며 디버깅할 때 편함
+문자열을 전달해 주는데 심볼 생성에는 어떠한 영향에도 미치지 않음
+const id2 = Symbol('id');
+id랑 id2가 생긴 것은 똑같지만 ==과 ===으로 식별하면 false 나옴
+
+🤗이 심볼을 객체 키로 만들어보자.
+const id = Symbol('id');
+const user = {
+  name : 'Mike',
+  age : 30,
+  [id] : 'myid'
+}
+console.log(user);
+-> {name: "Mike", age: 30, Symbol(id): "myid"}
+console.log(user[id])
+-> "myid"
+Object.keys(user);
+-> ["name", "age"]
+💡이런 Object.keys와 같은 메소드들은 심볼형 프로퍼티를 건너 띔
+
+어디에서 사용할까❓
+원본 데이터는 건드리지 않고 속성을 추가할 수 있음
+const user = {
+  name: 'Mike',
+  age: 30
+}
+const id = Symbol('id');⭕
+user[id] = 'myid';⭕ 
+user.name = 'myname';❌
+user.a_key_no_one_used = 'hahaha';❌
+
+✅심볼은 이름이 같더라도 다른 존재임
+그런데 전역 변수처럼 이름이 같으면 같은 객체를 가르켜야 할 때가 있음
+그떄 사용하는 것이
+Symbol.for():전역 심볼 -> 코드 어디에서든 사용할 수 있음
+🧐하나의 심볼만 보장받을 수 있으며, 없으면 만들고 있으면 가져오기 때문
+Symbol 함수는 매번 다른 Symbol 값을 생성하지만, Symbol.for 메소드는 하나를 생성한 뒤 키를 통해 같은 Symbol을 공유
+const id1 = Symbol.for('id');
+const id2 = Symbol.for('id');
+id1 === id2; // true
+
+심볼의 설명(이름)을 얻고 싶다면 keyFor를 사용
+Symbol.keyFor(id1) // "id"
+단, 전역 심볼이 아닌 경우 keyFor를 사용할 수 없음
+그럴 땐 description으로 이름을 알 수 있음
+const id = Symbol('id 입니다.');
+id.description; // "id 입니다."
+
+💡숨겨진 Symbol key를 보는 법
+const id = Symbol('id');
+const user = {
+  name: 'Mike',
+  age: 30,
+  [id]: 'myid'
+}
+object.getOwnPropertySymbols(user); // Symbol(id)
+심볼형 키를 포함한 모든 키를 보여 줌
+Reflect.ownKeys(user); // ["name", "age", Symbol(id)]
+대부분 라이브러리나 내장 함수들은 이런 것을 사용하지 않음
+유일한 프로퍼티를 추가하고 싶을 때 심볼을 사용하기❗❗
